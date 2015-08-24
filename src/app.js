@@ -12,26 +12,6 @@ myApp.value('Dessertmenu',{
         {name:'icecream',price:5},
         {name:'fruit',price:3}
     ]
-}).factory('DessertManager',function(Dessertmenu){
-    return{
-        price:function(){
-            return Dessertmenu.menu.map(function(){
-                return menu.price;
-            })
-        },
-        priceSort:function(){
-            Dessertmenu.menu.sort(function(a,b){
-                if(a.score > b.score){
-                    return 1;
-                }
-                if(a.score < b.score){
-                    return -1;
-                }
-                return 0;
-            });
-            return Dessertmenu.pies;
-        }
-    }
 });
 myApp.directive('myDiv',function(){
     return{
